@@ -12,7 +12,7 @@ if (response>100 || response<1) {
 }
 else{
     gridSize = response*response;
-    itemSize = canvasSize/gridSize;
+    itemSize = canvasSize/response;
     createGrid();
     }
 }
@@ -40,8 +40,9 @@ grid.addEventListener('mouseover', () => {
 grid.addEventListener('drag', (e) => {
     e.preventDefault();
 })
-}
+
 container.appendChild(grid);
+}
 }
 
 function removeGrid() {
@@ -49,4 +50,4 @@ function removeGrid() {
 }
 
 const startBtn = document.querySelector('#start')
-startBtn.addEventListener('click', getGridSize());
+startBtn.addEventListener('click', getGridSize);
