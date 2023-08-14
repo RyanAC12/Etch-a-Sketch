@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+    height: 500px;
+}
+
+#container {
+    display: flex;
+    background-color: beige;
+    width: 800px;
+    height: 800px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
