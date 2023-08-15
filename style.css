@@ -31,17 +31,18 @@ body {
     font-size: 80px;
 }
 
-#start, #clear {
+#clear {
     width: 80px;
     height: 50px;
     font-family: 'REM';
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    background-color: rgb(72, 250, 152);
+    background-color: rgb(131, 185, 156);
 }
 
-#clear {
-    background-color: rgb(166, 204, 157);
+#buttonarea {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
 }
-

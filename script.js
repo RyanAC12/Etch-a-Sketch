@@ -5,16 +5,10 @@ let canvasSize = 800;
 let itemSize;
 
 function getGridSize() {
-let response = prompt("Please enter a grid size 1-100");
-response = parseInt(response);
-if (response>100 || response<1) {
-    alert("Number is outside of specified range");
-}
-else{
-    gridSize = response*response;
-    itemSize = canvasSize/response;
+const sliderValue = parseInt(slider.value)
+    gridSize = sliderValue*sliderValue;
+    itemSize = canvasSize/sliderValue;
     createGrid();
-    }
 }
 
 function createGrid() {
@@ -59,8 +53,5 @@ function clearGrid() {
     })
 }
 
-const startBtn = document.querySelector('#start');
-startBtn.addEventListener('click', getGridSize);
-
-const clearBtn = document.querySelector('#clear');
-clearBtn.addEventListener('click', clearGrid);
+const slider = document.querySelector('#size');
+slider.addEventListener('input', getGridSize);
