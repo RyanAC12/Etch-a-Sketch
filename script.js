@@ -8,7 +8,7 @@ function getGridSize() {
 let response = prompt("Please enter a grid size 1-100");
 response = parseInt(response);
 if (response>100 || response<1) {
-    return "Number is outside of specified range";
+    alert("Number is outside of specified range");
 }
 else{
     gridSize = response*response;
@@ -18,6 +18,7 @@ else{
 }
 
 function createGrid() {
+removeGrid();
 for (i=0; i<gridSize; i++) {
 const grid = document.createElement('div');
 grid.classList.add('grid');
@@ -46,8 +47,20 @@ container.appendChild(grid);
 }
 
 function removeGrid() {
-    container.removeChild(grid);
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
 }
 
-const startBtn = document.querySelector('#start')
+function clearGrid() {
+    const gridItems = document.querySelectorAll('.grid');
+    gridItems.forEach(item => {
+        item.style.backgroundColor = '';
+    })
+}
+
+const startBtn = document.querySelector('#start');
 startBtn.addEventListener('click', getGridSize);
+
+const clearBtn = document.querySelector('#clear');
+clearBtn.addEventListener('click', clearGrid);

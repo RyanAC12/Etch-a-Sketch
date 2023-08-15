@@ -1,6 +1,6 @@
 body {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     height: 500px;
 }
 
@@ -31,7 +31,7 @@ body {
     font-size: 80px;
 }
 
-#start {
+#start, #clear {
     width: 80px;
     height: 50px;
     font-family: 'REM';
@@ -39,5 +39,9 @@ body {
     border: none;
     border-radius: 5px;
     background-color: rgb(72, 250, 152);
+}
+
+#clear {
+    background-color: rgb(166, 204, 157);
 }
 
