@@ -1,8 +1,10 @@
 const container = document.querySelector('#container');
 let isMouseDown = false;
-let gridSize;
+let gridSize = 1024;
 let canvasSize = 800;
-let itemSize;
+let itemSize = 25;
+
+createGrid();
 
 function getGridSize() {
 const sliderValue = parseInt(slider.value)
@@ -55,3 +57,11 @@ function clearGrid() {
 
 const slider = document.querySelector('#size');
 slider.addEventListener('input', getGridSize);
+
+const sliderValueDiv = document.querySelector('#slidervalue');
+slider.addEventListener('input', () => {
+    sliderValueDiv.textContent = slider.value;
+});
+
+const clearBtn = document.querySelector('#clear');
+clearBtn.addEventListener('click', clearGrid);

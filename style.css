@@ -2,11 +2,12 @@ body {
     display: flex;
     justify-content: flex-start;
     height: 500px;
+    background-color: rgb(34, 34, 34);
 }
 
 #container {
     display: flex;
-    background-color: beige;
+    background-color: antiquewhite;
     width: 800px;
     height: 800px;
     margin-top: 50px;
@@ -29,6 +30,7 @@ body {
 #title h1 {
     font-family: 'REM';
     font-size: 80px;
+    color: antiquewhite;
 }
 
 #clear {
@@ -38,11 +40,59 @@ body {
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    background-color: rgb(131, 185, 156);
+    background-color: rgb(182, 182, 182);
 }
 
 #buttonarea {
     width: 500px;
     display: flex;
     justify-content: space-around;
+}
+
+#slidervalue {
+    text-align: center;
+}
+
+#slider {
+    font-family: 'REM';
+    color: antiquewhite;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#size {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#size::-webkit-slider-runnable-track {
+    height: 10px;
+    background: antiquewhite;
+    border-radius: 5px;
+}
+
+#size::-moz-range-track {
+    height: 10px;
+    background: antiquewhite;
+    border-radius: 5px;
+}
+
+#size::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5px;
+}
+
+#size::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: gray;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px;
 }
